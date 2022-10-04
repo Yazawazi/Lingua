@@ -22,7 +22,8 @@ def AvatarPromoteExcelConfigData(config):
     if "addProps" in config:
         for index, value in enumerate(config["addProps"]):
             addPropConfig = value
-            addPropConfig["propType"] = FightPropEnum(addPropConfig["propType"]).name
+            if "propType" in addPropConfig:
+                addPropConfig["propType"] = FightPropEnum(addPropConfig["propType"]).name
             newConfig["addProps"][index] = addPropConfig
 
     if "requiredPlayerLevel" in config:

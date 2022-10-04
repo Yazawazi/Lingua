@@ -1,3 +1,6 @@
+from ..common.FightPropEnum import FightPropEnum
+
+
 def AvatarTalentExcelConfigData(config):
     newConfig = {
         "talentId": config["talentId"],
@@ -6,7 +9,7 @@ def AvatarTalentExcelConfigData(config):
         "mainCostItemId": config["mainCostItemId"],
         "mainCostItemCount": config["mainCostItemCount"],
         "openConfig": "",
-        "addProps": config["addProps"],
+        "addProps": [{}, {}],
         "paramList": config["paramList"]
     }
 
@@ -15,5 +18,12 @@ def AvatarTalentExcelConfigData(config):
 
     if "openConfig" in config:
         newConfig["openConfig"] = config["openConfig"]
+
+    if "addProps" in config:
+        for index, value in enumerate(config["addProps"]):
+            addPropConfig = value
+            if "propType" in addPropConfig:
+                addPropConfig["propType"] = FightPropEnum(addPropConfig["propType"]).name
+            newConfig["addProps"][index] = addPropConfig
 
     return newConfig

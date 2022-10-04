@@ -4,29 +4,46 @@ import json
 from rich.progress import track
 from rich.console import Console
 
+from res.excels.NpcExcelConfigData import NpcExcelConfigData
+from res.excels.QuestExcelConfigData import QuestExcelConfigData
 from res.excels.GadgetExcelConfigData import GadgetExcelConfigData
 from res.excels.GatherExcelConfigData import GatherExcelConfigData
 from res.excels.AvatarExcelConfigData import AvatarExcelConfigData
+from res.excels.WeaponExcelConfigData import WeaponExcelConfigData
+from res.excels.RewardExcelConfigData import RewardExcelConfigData
 from res.excels.DailyDungeonConfigData import DailyDungeonConfigData
 from res.excels.ChapterExcelConfigData import ChapterExcelConfigData
 from res.excels.CombineExcelConfigData import CombineExcelConfigData
+from res.excels.MonsterExcelConfigData import MonsterExcelConfigData
+from res.excels.MaterialExcelConfigData import MaterialExcelConfigData
 from res.excels.CookBonusExcelConfigData import CookBonusExcelConfigData
+from res.excels.ReliquaryExcelConfigData import ReliquaryExcelConfigData
 from res.excels.CookRecipeExcelConfigData import CookRecipeExcelConfigData
 from res.excels.EquipAffixExcelConfigData import EquipAffixExcelConfigData
+from res.excels.ProudSkillExcelConfigData import ProudSkillExcelConfigData
 from res.excels.QuestCodexExcelConfigData import QuestCodexExcelConfigData
 from res.excels.AnimalCodexExcelConfigData import AnimalCodexExcelConfigData
 from res.excels.AvatarLevelExcelConfigData import AvatarLevelExcelConfigData
 from res.excels.NewActivityExcelConfigData import NewActivityExcelConfigData
+from res.excels.PlayerLevelExcelConfigData import PlayerLevelExcelConfigData
 from res.excels.AvatarCurveExcelConfigData import AvatarCurveExcelConfigData
 from res.excels.AvatarSkillExcelConfigData import AvatarSkillExcelConfigData
 from res.excels.WeaponCodexExcelConfigData import WeaponCodexExcelConfigData
 from res.excels.AvatarTalentExcelConfigData import AvatarTalentExcelConfigData
+from res.excels.MonsterCurveExcelConfigData import MonsterCurveExcelConfigData
+from res.excels.PersonalLineExcelConfigData import PersonalLineExcelConfigData
+from res.excels.ReliquarySetExcelConfigData import ReliquarySetExcelConfigData
 from res.excels.AvatarCostumeExcelConfigData import AvatarCostumeExcelConfigData
 from res.excels.AvatarPromoteExcelConfigData import AvatarPromoteExcelConfigData
 from res.excels.MaterialCodexExcelConfigData import MaterialCodexExcelConfigData
+from res.excels.RewardPreviewExcelConfigData import RewardPreviewExcelConfigData
 from res.excels.AvatarFlycloakExcelConfigData import AvatarFlycloakExcelConfigData
+from res.excels.ReliquaryAffixExcelConfigData import ReliquaryAffixExcelConfigData
 from res.excels.ReliquaryCodexExcelConfigData import ReliquaryCodexExcelConfigData
+from res.excels.ReliquaryLevelExcelConfigData import ReliquaryLevelExcelConfigData
+from res.excels.MonsterDescribeExcelConfigData import MonsterDescribeExcelConfigData
 from res.excels.AvatarSkillDepotExcelConfigData import AvatarSkillDepotExcelConfigData
+from res.excels.ReliquaryMainPropExcelConfigData import ReliquaryMainPropExcelConfigData
 from res.excels.AvatarFettersLevelExcelConfigData import AvatarFettersLevelExcelConfigData
 
 
@@ -116,6 +133,57 @@ convertMap = [{
 }, {
     "file": "GatherExcelConfigData.json",
     "function": GatherExcelConfigData
+}, {
+    "file": "MaterialExcelConfigData.json",
+    "function": MaterialExcelConfigData
+}, {
+    "file": "WeaponExcelConfigData.json",
+    "function": WeaponExcelConfigData
+}, {
+    "file": "ReliquaryExcelConfigData.json",
+    "function": ReliquaryExcelConfigData
+}, {
+    "file": "MonsterCurveExcelConfigData.json",
+    "function": MonsterCurveExcelConfigData
+}, {
+    "file": "MonsterExcelConfigData.json",
+    "function": MonsterExcelConfigData
+}, {
+    "file": "MonsterDescribeExcelConfigData.json",
+    "function": MonsterDescribeExcelConfigData
+}, {
+    "file": "NpcExcelConfigData.json",
+    "function": NpcExcelConfigData
+}, {
+    "file": "PersonalLineExcelConfigData.json",
+    "function": PersonalLineExcelConfigData
+}, {
+    "file": "PlayerLevelExcelConfigData.json",
+    "function": PlayerLevelExcelConfigData
+}, {
+    "file": "ProudSkillExcelConfigData.json",
+    "function": ProudSkillExcelConfigData
+}, {
+    "file": "QuestExcelConfigData.json",
+    "function": QuestExcelConfigData
+}, {
+    "file": "ReliquaryAffixExcelConfigData.json",
+    "function": ReliquaryAffixExcelConfigData
+}, {
+    "file": "ReliquaryLevelExcelConfigData.json",
+    "function": ReliquaryLevelExcelConfigData
+}, {
+    "file": "ReliquaryMainPropExcelConfigData.json",
+    "function": ReliquaryMainPropExcelConfigData
+}, {
+    "file": "ReliquarySetExcelConfigData.json",
+    "function": ReliquarySetExcelConfigData
+}, {
+    "file": "RewardExcelConfigData.json",
+    "function": RewardExcelConfigData
+}, {
+    "file": "RewardPreviewExcelConfigData.json",
+    "function": RewardPreviewExcelConfigData
 }]
 
 console.print("[green]正在转换...[/green]")

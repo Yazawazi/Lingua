@@ -43,20 +43,13 @@ def AvatarExcelConfigData(config):
     if "avatarPromoteRewardIdList" in config:
         newConfig["avatarPromoteRewardIdList"] = config["avatarPromoteRewardIdList"]
 
-    for propGrowCurve in config["propGrowCurves"]:
-        try:
-            typeName = FightPropEnum(propGrowCurve["type"]).name
-        except:
-            typeName = "UNDEFINED"
+    if "propGrowCurves" in config:
+        newConfig["propGrowCurves"] = config["propGrowCurves"]
+        for index, value in enumerate(newConfig["propGrowCurves"]):
+            if "type" in value:
+                newConfig["propGrowCurves"][index]["type"] = FightPropEnum(value["type"]).name
 
-        try:
-            growCurve = GrowCurveEnum(propGrowCurve["growCurve"]).name
-        except:
-            growCurve = "UNDEFINED"
-
-        newConfig["propGrowCurves"].append({
-            "type": typeName,
-            "growCurve": growCurve
-        })
+            if "growCurve" in value:
+                newConfig["propGrowCurves"][index]["growCurve"] = GrowCurveEnum(value["growCurve"]).name
 
     return newConfig
