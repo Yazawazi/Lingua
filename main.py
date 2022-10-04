@@ -4,12 +4,15 @@ import json
 from rich.progress import track
 from rich.console import Console
 
+from res.excels.GadgetExcelConfigData import GadgetExcelConfigData
+from res.excels.GatherExcelConfigData import GatherExcelConfigData
 from res.excels.AvatarExcelConfigData import AvatarExcelConfigData
 from res.excels.DailyDungeonConfigData import DailyDungeonConfigData
 from res.excels.ChapterExcelConfigData import ChapterExcelConfigData
 from res.excels.CombineExcelConfigData import CombineExcelConfigData
 from res.excels.CookBonusExcelConfigData import CookBonusExcelConfigData
 from res.excels.CookRecipeExcelConfigData import CookRecipeExcelConfigData
+from res.excels.EquipAffixExcelConfigData import EquipAffixExcelConfigData
 from res.excels.QuestCodexExcelConfigData import QuestCodexExcelConfigData
 from res.excels.AnimalCodexExcelConfigData import AnimalCodexExcelConfigData
 from res.excels.AvatarLevelExcelConfigData import AvatarLevelExcelConfigData
@@ -104,6 +107,15 @@ convertMap = [{
 }, {
     "file": "DailyDungeonConfigData.json",
     "function": DailyDungeonConfigData
+}, {
+    "file": "EquipAffixExcelConfigData.json",
+    "function": EquipAffixExcelConfigData
+}, {
+    "file": "GadgetExcelConfigData.json",
+    "function": GadgetExcelConfigData
+}, {
+    "file": "GatherExcelConfigData.json",
+    "function": GatherExcelConfigData
 }]
 
 console.print("[green]正在转换...[/green]")
