@@ -1,6 +1,6 @@
 # Lingua
 
-> WIP Project
+> GC 方面将会兼容相关格式的资源，故该 Repo 公开留档，不再更新。
 
 将 Sorapointa 的 Excel 资源文件快速转换为符合 Grasscutter 范式的资源文件以防止神笔。
 
